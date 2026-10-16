@@ -9,12 +9,12 @@ public class Main {
         System.out.println("Hello");
 
         BankAccount bankAccount1 = new BankAccount(10,500);
-        CardTypeInstrument cardTypeInstrument1 = new CardTypeInstrument(bankAccount1,11,12, LocalDate.of(2026,1,1));
-        UpiTypeInstrument upiTypeInstrument1 = new UpiTypeInstrument(bankAccount1,13);
+        Instrument cardTypeInstrument1 = new CardTypeInstrument(bankAccount1,11,12, LocalDate.of(2026,1,1));
+        Instrument upiTypeInstrument1 = new UpiTypeInstrument(bankAccount1,13);
         User user1 = new User(1, List.of(cardTypeInstrument1,upiTypeInstrument1));
 
         BankAccount bankAccount2 = new BankAccount(20,100);
-        UpiTypeInstrument upiTypeInstrument2 = new UpiTypeInstrument(bankAccount2,23);
+        Instrument upiTypeInstrument2 = new UpiTypeInstrument(bankAccount2,23);
         User user2 = new User(2, List.of(upiTypeInstrument2));
 
 

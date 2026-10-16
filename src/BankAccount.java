@@ -2,8 +2,8 @@ import java.util.Objects;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BankAccount {
-    private long balance;
     private long accountNo;
+    private long balance;
     private ReentrantLock lock;
 
     public BankAccount(int accountNo, int balance) {
@@ -12,27 +12,24 @@ public class BankAccount {
         this.lock = new ReentrantLock();
     }
 
-    public long getBalance() {
-        return balance;
-    }
-
-    public void setBalance(long balance) {
-        this.balance = balance;
-    }
-
     public long getAccountNo() {
         return accountNo;
+    }
+
+    public long getBalance() {
+        return balance;
     }
 
     public ReentrantLock getLock() {
         return lock;
     }
 
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
     @Override
     public String toString() {
-        return "BankAccount{" +
-                "balance=" + balance +
-                ", accountNo=" + accountNo +
-                '}';
+        return "BankAccount{" + "balance=" + balance + ", accountNo=" + accountNo + '}';
     }
 }
